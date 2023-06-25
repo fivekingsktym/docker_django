@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-1uxv&r4g((7gs%@wz1c7_=$7i9-i2vyidf&2s)#x@8#h#fs8a*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://8000-fivekingskt-dockerdjang-tuj5qe4h0qg.ws-us100.gitpod.io/']
 
 
 # Application definition
@@ -121,3 +122,15 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# CSRF_COOKIE_DOMAIN = 'https://8000-fivekingskt-dockerdjang-tuj5qe4h0qg.ws-us100.gitpod.io/'
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-fivekingskt-dockerdjang-tuj5qe4h0qg.ws-us100.gitpod.io',
+    # 'https://8000-fivekingskt-dockerdjang-tuj5qe4h0qg.ws-us100.gitpod.io/',
+    # 'http://8000-fivekingskt-dockerdjang-tuj5qe4h0qg.ws-us100.gitpod.io/',
+    # 'https://*.127.0.0.1',
+]
+
+# CSRF_COOKIE_SECURE = True
+
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
